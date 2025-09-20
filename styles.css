@@ -1,22 +1,115 @@
-body {
+:root {
+  --yellow: #F4D04E;
+  --white: #FFF;
+  --gray-950: #111111;
+  --gray-500: #6B6B6B;
+  /* numerical font-weights acdg to ai */
+  --extra-bold: 800;
+  --medium: 500;
+  --spacing-300: 24px;
+  --spacing-150: 12px;
+  --spacing-100: 8px;
+  --spacing-50: 4px;
+}
+
+body, h1 {
   margin: 0;
+  padding: 0;
+}
+
+body {
   background: #f5d04e;
+
+  font-family: Figtree, sans-serif;
+  font-weight: var(--medium);
+  line-height: 150%;
+  letter-spacing: 0px;
+
   display: flex;
   justify-content: center;
   align-items:center;
   height: 100vh;
-  border:1px solid blue;
-}
+  color: var(--gray-950);
 
-.card {
-  --card-padding: 20px;
-  background: #fff;
-  width: 400px;
-  height: 600px;
-  box-shadow: 0 25px 25px 0 hsla(0, 0%, 0%, .1477);
-  display: flex;
-  flex-direction: column;
-  align-items:flex-start;
-  padding: var(--card-padding);
-  gap: var(--card-padding);
+  h1 {
+    font-size: 24px;
+    font-weight: var(--extra-bold);
+  }
+
+  .summary{
+    font-size: 16px;
+    font-weight: var(--medium);
+    color: var(--gray-500);
+  }
+
+  .published-date{
+    font-size: 14px;
+    font-weight: var(--medium);
+  }
+
+  .author{
+    font-size: 14px;
+    font-weight: var(--extra-bold);
+
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    .author-avatar {
+      aspect-ratio: 1;
+      height: 32px;
+    }
+  }
+
+  .card {
+    --card-padding: 24px;
+    --card-radius: 20px;
+
+    background: #fff;
+    box-shadow: 8px 8px var(--gray-950);
+    border: 1px solid var(--gray-950);
+    border-radius: var(--card-radius);
+
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+
+    padding: var(--card-padding);
+    gap: var(--card-padding);
+    /* todo 382 by 520 but offset by --card-padding */
+    /* figure out how to resize in mobile later */
+    width: calc(382px - var(--card-padding) * 2);
+    height: calc(520px - var(--card-padding) * 2);
+
+    > img.illustration {
+      width: inherit;
+      border-radius: calc(var(--card-radius) / 2);
+    }
+
+    > .content {
+      flex: auto;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    .tag {
+      font-size: 14px;
+      font-weight: var(--extra-bold);
+      color: var(--gray-950);
+
+      background: #f2c83e;
+      border-radius: 4px;
+
+      width: 82px;
+      height: 30px;
+
+      text-align: center;
+      align-content: center;
+    }
+
+    .date{
+    }
+  }
 }
