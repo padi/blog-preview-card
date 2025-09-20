@@ -1,0 +1,22 @@
+body {
+  margin: 0;
+  background: #f5d04e;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  height: 100vh;
+  border:1px solid blue;
+}
+
+.card {
+  --card-padding: 20px;
+  background: #fff;
+  width: 400px;
+  height: 600px;
+  box-shadow: 0 25px 25px 0 hsla(0, 0%, 0%, .1477);
+  display: flex;
+  flex-direction: column;
+  align-items:flex-start;
+  padding: var(--card-padding);
+  gap: var(--card-padding);
+}
