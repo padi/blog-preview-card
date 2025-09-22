@@ -89,7 +89,7 @@ body {
 
     /* but this is still incomplete. */
     /* 1. DONE how to enforce body padding? A: width 100% and max-width to parent and children divs  */
-    /* 2. child: img still fixed differently */
+    /* 2. DONE child: img still fixed differently */
     /* 3. child: text different size */
 
     /* 382 minus the card padding x 2 */
@@ -99,7 +99,9 @@ body {
 
     > img.illustration {
       width: 100%;
+      height: 200px;
       border-radius: calc(var(--card-radius) / 2);
+      object-fit: cover;
     }
 
     > .content {
