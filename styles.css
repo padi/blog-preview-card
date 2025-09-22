@@ -18,13 +18,13 @@ body, h1 {
 }
 
 body {
-  background: #f5d04e;
+  background: var(--yellow);
 
   /* default color of font/typeface */
   font-family: Figtree, sans-serif;
   font-weight: var(--medium);
   line-height: 150%;
-  letter-spacing: 0px;
+  letter-spacing: 0;
   color: var(--gray-950);
 
   /* center content */
@@ -33,7 +33,7 @@ body {
   align-items:center;
   min-height: 100vh;
 
-  padding: 24px;
+  padding: 0 24px;
 
   h1 {
     font-size: clamp(20px, 4.8vw, 24px);
@@ -69,7 +69,7 @@ body {
     --card-padding: 24px;
     --card-radius: 20px;
 
-    background: #fff;
+    background: var(--white);
     box-shadow: 8px 8px var(--gray-950);
     border: 1px solid var(--gray-950);
     border-radius: var(--card-radius);
@@ -108,7 +108,7 @@ body {
     }
 
     &:hover h1 {
-      color: #f5d04e;
+      color: var(--yellow);
     }
 
     .tag {
@@ -116,7 +116,7 @@ body {
       font-weight: var(--extra-bold);
       color: var(--gray-950);
 
-      background: #f2c83e;
+      background: var(--yellow);
       border-radius: 4px;
 
       width: clamp(72px, 16.4vw, 82px);
