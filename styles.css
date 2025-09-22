@@ -92,9 +92,6 @@ body {
     /* 2. DONE child: img still fixed differently */
     /* 3. child: text different size */
 
-    /* 382 minus the card padding x 2 */
-    /* max-width: 334px;  */
-
     height: calc(520px - var(--card-padding) * 2);
 
     > img.illustration {
