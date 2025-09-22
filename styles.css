@@ -94,6 +94,10 @@ body {
       justify-content: space-between;
     }
 
+    &:hover h1 {
+      color: #f5d04e;
+    }
+
     .tag {
       font-size: 14px;
       font-weight: var(--extra-bold);
