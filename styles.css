@@ -82,17 +82,14 @@ body {
     gap: var(--card-padding);
 
     width: 100%;
+    /* todo Q: why do I have to account for --card-padding again? why isn't this automatic? */
     /* 382 by 520 but offset by --card-padding */
     max-width: calc(382px - var(--card-padding) * 2);
-
-    /* but this is still incomplete. */
-    /* 1. DONE how to enforce body padding? A: width 100% and max-width to parent and children divs  */
-    /* 2. DONE child: img still fixed differently */
-    /* 3. DONE child: text different size */
 
     /* card starts shrinking in height from */
     /* 520 -> 500 when viewport width is 500 */
     --card-height: clamp(500px, 104vw, 520px);
+    /* todo Q: why do I have to account for --card-padding again? why isn't this automatic? */
     height: calc(var(--card-height) - var(--card-padding) * 2);
 
     > img.illustration {
