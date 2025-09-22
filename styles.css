@@ -36,18 +36,18 @@ body {
   padding: 24px;
 
   h1 {
-    font-size: 24px;
+    font-size: clamp(20px, 4.8vw, 24px);
     font-weight: var(--extra-bold);
   }
 
   .summary{
-    font-size: 16px;
+    font-size: clamp(14px, 3.2vw, 16px);
     font-weight: var(--medium);
     color: var(--gray-500);
   }
 
   .published-date{
-    font-size: 14px;
+    font-size: clamp(12px, 2.8vw ,14px);
     font-weight: var(--medium);
   }
 
@@ -81,8 +81,6 @@ body {
     padding: var(--card-padding);
     gap: var(--card-padding);
 
-
-    /* todo figure out how to resize in mobile later */
     width: 100%;
     /* 382 by 520 but offset by --card-padding */
     max-width: calc(382px - var(--card-padding) * 2);
@@ -90,9 +88,12 @@ body {
     /* but this is still incomplete. */
     /* 1. DONE how to enforce body padding? A: width 100% and max-width to parent and children divs  */
     /* 2. DONE child: img still fixed differently */
-    /* 3. child: text different size */
+    /* 3. DONE child: text different size */
 
-    height: calc(520px - var(--card-padding) * 2);
+    /* card starts shrinking in height from */
+    /* 520 -> 500 when viewport width is 500 */
+    --card-height: clamp(500px, 104vw, 520px);
+    height: calc(var(--card-height) - var(--card-padding) * 2);
 
     > img.illustration {
       width: 100%;
@@ -114,21 +115,18 @@ body {
     }
 
     .tag {
-      font-size: 14px;
+      font-size: clamp(12px, 2.8vw ,14px);
       font-weight: var(--extra-bold);
       color: var(--gray-950);
 
       background: #f2c83e;
       border-radius: 4px;
 
-      width: 82px;
-      height: 30px;
+      width: clamp(72px, 16.4vw, 82px);
+      height: clamp(26px, 6vw, 30px);
 
       text-align: center;
       align-content: center;
-    }
-
-    .date{
     }
   }
 }
